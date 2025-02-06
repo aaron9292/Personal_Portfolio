@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Typography, Card, CardContent, Grid, Chip } from '@mui/material';
 
 function Education() {

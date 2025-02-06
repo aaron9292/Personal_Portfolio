@@ -9,9 +9,9 @@ function WorkExperience() {
       year: 'May 2024 - October 2024',
       logo: '/logos/utd-logo.png',
       description: [
-        'Developed a scalable microservice architecture using Kubernetes and Docker.',
-        'Improved search query performance by 20% with optimized algorithms.',
-        'Collaborated with a team of 8 engineers using Agile methodologies.',
+        'Compiled 4000+ images using Python scripts and OpenCV for AI model training.',
+        'Analyzed generated output of trained model leading to improvements of 30%',
+        'Collaborated with a team of over 8 other students.',
       ],
     },
     {
@@ -20,9 +20,9 @@ function WorkExperience() {
       year: 'May 2023 - November 2023',
       logo: '/logos/l3-logo.png',
       description: [
-        'Built REST APIs to support e-commerce functionalities with Node.js.',
-        'Integrated cloud services to automate data pipelines on AWS.',
-        'Reduced server costs by 15% by refactoring legacy code.',
+        'Developed automated testing scripts using Bash to validate subsystem interactions.',
+        'Integrated code scanning tools into GitLab CI/CI pipeline improving code quality and coverage metrics.',
+        'Designed and implemented a serialization framework for Java and C++ subsystem data exchanges.',
       ],
     },
     {
@@ -31,9 +31,9 @@ function WorkExperience() {
       year: 'Jun 2022 - August 2022',
       logo: '/logos/cisco-eagle-logo.jpg',
       description: [
-        'Designed and developed an interactive dashboard using React and Express.',
-        'Implemented user authentication and authorization flows.',
-        'Led a team of 3 to deliver features on time for product launch.',
+        'Supervised activities on SharePoint and affiliated websites improving system usability.',
+        'Migrated company files to SharePoint utilizing Microsoft migration tools.',
+        'Automated key business workflows using PowerAutomate reducing manual processes by 80%.',
       ],
     },
   ];

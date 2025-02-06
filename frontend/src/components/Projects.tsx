@@ -1,29 +1,32 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import for navigation
 import { Box, Typography, Card, CardContent, Grid, Button, Chip } from '@mui/material';
 import { GitHub } from '@mui/icons-material';
 
 function Projects() {
+  const navigate = useNavigate(); // React Router hook for navigation
+
   const projects = [
     {
-      name: 'E-commerce Platform',
-      description:
-        'Built a full-stack e-commerce platform with React, Node.js, and PostgreSQL. Implemented features like user authentication, product catalog, and shopping cart functionality.',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Express', 'Redux'],
-      github: 'https://github.com/username/e-commerce',
+      id: 'ai-emotion',
+      name: 'AI Emotion Video Generator',
+      description: 'An AI short-form video generator',
+      technologies: ['Python', 'Hugging Face', 'OpenAI Whisper', 'FFmpeg'],
+      github: 'https://github.com/aaron9292/Emotion-Video-App',
     },
     {
-      name: 'Machine Learning Image Classifier',
-      description:
-        'Developed a machine learning model using TensorFlow to classify images. Created a web interface for users to upload and classify images in real-time.',
-      technologies: ['Python', 'TensorFlow', 'Flask', 'React', 'Docker'],
-      github: 'https://github.com/username/ml-image-classifier',
+      id: 'game-agent',
+      name: 'AI Game Agent',
+      description: 'A deep learning game agent for Touhou',
+      technologies: ['Python', 'PyTorch', 'Stable-Baseline3', 'OpenCV'],
+      github: 'https://github.com/choutianxius/th14-rl',
     },
     {
-      name: 'Real-time Chat Application',
-      description:
-        'Created a real-time chat application using WebSocket technology. Features include private messaging, group chats, and file sharing.',
-      technologies: ['React', 'Socket.io', 'Node.js', 'MongoDB', 'TypeScript'],
-      github: 'https://github.com/username/real-time-chat',
+      id: 'stock-forecast',
+      name: 'Stock Forecasting Model',
+      description: 'A stock movement prediction model',
+      technologies: ['Python', 'TensorFlow', 'Keras', 'Pandas', 'MatPlotLib'],
+      github: 'https://github.com/aaron9292/Stock_Prediction',
     },
   ];
 
@@ -45,7 +48,13 @@ function Projects() {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
+                cursor: 'pointer', // Makes the card clickable
+                '&:hover': {
+                  transform: 'scale(1.02)', // Adds a hover effect
+                  transition: 'transform 0.2s',
+                },
               }}
+              onClick={() => navigate(`/project/${project.id}`)} // Navigate to details page
             >
               <CardContent>
                 <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 1 }}>
@@ -54,33 +63,12 @@ function Projects() {
                 <Typography variant="body2" sx={{ color: 'gray', mb: 2 }}>
                   {project.description}
                 </Typography>
-                <Box
-                  sx={{
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    gap: 1,
-                    justifyContent: 'center', // Ensures Chips are centered
-                    mb: 2,
-                    fontWeight: 'bold'
-                  }}
-                >
+                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, justifyContent: 'center', mb: 2, fontWeight: 'bold'}}>
                   {project.technologies.map((tech, i) => (
-                    <Chip key={i} label={tech} color="primary" />
+                    <Chip key={i} label={tech} />
                   ))}
                 </Box>
               </CardContent>
-              <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: 'auto' }}>
-                <Button
-                    variant="contained" // Use a filled background for better visibility
-                    size="small"
-                    href={project.github}
-                    target="_blank"
-                    startIcon={<GitHub />}
-                    sx={{ textTransform: 'none', backgroundColor: 'black', color: 'white', '&:hover': { backgroundColor: 'gray' } }}
-                >
-                  GitHub
-                </Button>
-              </Box>
             </Card>
           </Grid>
         ))}

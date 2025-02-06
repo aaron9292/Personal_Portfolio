@@ -1,34 +1,39 @@
-import React from 'react';
-import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
-
-function smoothScrollTo(id: string) {
-  const element = document.getElementById(id);
-  if (element) {
-    window.scrollTo({
-      top: element.offsetTop - 64, // Adjust for navbar height
-      behavior: 'smooth',
-    });
-  }
-}
+import React from "react";
+import { AppBar, Toolbar, Typography, Box, Button } from "@mui/material";
 
 function Header() {
   return (
-    <AppBar position="sticky" sx={{ backgroundColor: 'white', boxShadow: 2 }}>
-      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', px: 4 }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-          <Typography variant="h6" sx={{ fontWeight: 'bold', color: 'black' }}>
-            Portfolio
-          </Typography>
-          <Button onClick={() => smoothScrollTo('education')} sx={{ color: 'black' }}>
+    <AppBar
+      position="fixed"
+      elevation={1} // Adds a slight shadow to the navbar
+      sx={{
+        backgroundColor: "#DEBFAA", // Beige background color
+      }}
+    >
+      <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+        {/* Logo */}
+        <Typography
+          variant="h6"
+          sx={{ fontWeight: "bold", color: "white" }} // Black text for the logo
+        >
+          Aaron Xu
+        </Typography>
+
+        {/* Navigation Links */}
+        <Box sx={{ display: "flex", gap: 2 }}>
+          <Button href="#education" sx={{ color: "white", fontWeight: "bold" }}>
             Education
           </Button>
-          <Button onClick={() => smoothScrollTo('skills')} sx={{ color: 'black' }}>
+          <Button href="#skills" sx={{ color: "white", fontWeight: "bold" }}>
             Skills
           </Button>
-          <Button onClick={() => smoothScrollTo('work-experience')} sx={{ color: 'black' }}>
+          <Button
+            href="#work-experience"
+            sx={{ color: "white", fontWeight: "bold" }}
+          >
             Experience
           </Button>
-          <Button onClick={() => smoothScrollTo('projects')} sx={{ color: 'black' }}>
+          <Button href="#projects" sx={{ color: "white", fontWeight: "bold" }}>
             Projects
           </Button>
         </Box>

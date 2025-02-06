@@ -4,9 +4,9 @@ import { Box, Typography, Grid, Chip } from '@mui/material';
 function Skills() {
   // Define the type for skills data
   const skillsData: { [key: string]: string[] } = {
-    'Programming Languages': ['Python', 'JavaScript', 'C++', 'Java'],
-    Frameworks: ['React', 'Node.js', 'Express', 'Django'],
-    Tools: ['Git', 'Docker', 'Kubernetes', 'Postman'],
+    'Programming Languages': ['Java', 'Python', 'C++'],
+    Frameworks: ['React', 'Hugging Face', 'TensorFlow', 'Scikit-Learn'],
+    Tools: ['Git', 'Docker', 'Postman'],
   };
 
   return (

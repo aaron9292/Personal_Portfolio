@@ -1,8 +1,6 @@
-import React from 'react';
 import { Box, Typography, Grid, Chip } from '@mui/material';
 
 function Skills() {
-  // Define the type for skills data
   const skillsData: { [key: string]: string[] } = {
     'Programming Languages': ['Java', 'Python', 'C++'],
     Frameworks: ['React', 'Hugging Face', 'TensorFlow', 'Scikit-Learn'],
@@ -15,7 +13,6 @@ function Skills() {
         Skills
       </Typography>
 
-      {/* Grid for Skill Categories */}
       <Grid container spacing={4} justifyContent="center">
         {Object.keys(skillsData).map((category) => (
           <Grid item xs={12} sm={6} md={4} key={category}>

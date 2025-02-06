@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Typography, Card, CardContent, Divider, Avatar } from '@mui/material';
 
 function WorkExperience() {
@@ -44,7 +43,6 @@ function WorkExperience() {
         Work Experience
       </Typography>
 
-      {/* Display experiences top to bottom */}
       {experiences.map((experience, index) => (
         <Card
           key={index}
@@ -52,7 +50,6 @@ function WorkExperience() {
         >
           <CardContent>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 1 }}>
-              {/* Add Logo */}
               <Avatar
                 src={experience.logo}
                 alt={experience.company}

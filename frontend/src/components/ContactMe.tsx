@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Typography, Link, IconButton, Button } from "@mui/material";
 import { Email, Phone, LinkedIn, GitHub, Download } from "@mui/icons-material";
 
@@ -15,13 +14,13 @@ function ContactMe() {
         width: "100vw",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center", // Vertically center content
-        alignItems: "center", // Horizontally center content
+        justifyContent: "center", 
+        alignItems: "center",
         textAlign: "center",
-        margin: 0, // Remove any extra margin
-        padding: 0, // Remove any extra padding
-        color: "white", // Ensure text is readable
-        position: "relative", // Make sure it doesn't get cut off
+        margin: 0, 
+        padding: 0, 
+        color: "white", 
+        position: "relative",
       }}
     >
       <Typography variant="h4" sx={{ fontWeight: "bold", mb: 3, color: "white" }}>
@@ -93,7 +92,7 @@ function ContactMe() {
       <Button
         variant="outlined"
         startIcon={<Download />}
-        href="/resume.pdf" // Link to your resume file in the public folder
+        href="/resume.pdf"
         target="_blank"
         download
         sx={{

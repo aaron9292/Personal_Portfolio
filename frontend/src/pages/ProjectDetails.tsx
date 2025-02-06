@@ -1,9 +1,7 @@
-import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Box, Typography, Button, Chip } from "@mui/material";
 import { ArrowBack, GitHub } from "@mui/icons-material";
 
-// Sample project data (Replace with database/API call if needed)
 const projects = [
   {
     id: "ai-emotion",
@@ -146,7 +144,7 @@ function ProjectDetails() {
         sx={{
           color: "gray",
           mb: 3,
-          whiteSpace: "pre-line", // Enables line breaks in the description
+          whiteSpace: "pre-line",
         }}
       >
         {project.description}
@@ -156,9 +154,9 @@ function ProjectDetails() {
       {project.features && (
         <Box
           sx={{
-            margin: "0 auto", // Center the box horizontally
-            maxWidth: "600px", // Set a maximum width for the features list
-            mb: 4, // Add margin-bottom for spacing
+            margin: "0 auto", 
+            maxWidth: "600px",
+            mb: 4, 
           }}
         >
           {/* Centered Features Header */}
@@ -166,8 +164,8 @@ function ProjectDetails() {
             variant="h6"
             sx={{
               fontWeight: "bold",
-              textAlign: "center", // Center the header text
-              mb: 2, // Add spacing below the header
+              textAlign: "center",
+              mb: 2,
             }}
           >
             Features
@@ -177,16 +175,16 @@ function ProjectDetails() {
           <ul
             style={{
               margin: "0",
-              padding: "0 1.5rem", // Proper padding for the bullets
-              listStyleType: "disc", // Use disc bullets
-              textAlign: "left", // Ensure left-alignment of list items
+              padding: "0 1.5rem", 
+              listStyleType: "disc", 
+              textAlign: "left",
             }}
           >
             {project.features.map((feature, index) => (
               <li
                 key={index}
                 style={{
-                  marginBottom: "0.5rem", // Add spacing between list items
+                  marginBottom: "0.5rem",
                 }}
               >
                 <Typography variant="body1" sx={{ display: "inline" }}>

@@ -1,4 +1,3 @@
-import React from 'react';
 import AboutMe from './components/AboutMe';
 import Header from './components/Header';
 import Education from './components/Education';
@@ -16,7 +15,7 @@ function App() {
         padding: 0,
         boxSizing: 'border-box',
         overflowX: 'hidden',
-        backgroundColor: 'white', // Ensures no transparent background anywhere
+        backgroundColor: 'white',
       }}
     >
       {/* Header */}
@@ -33,7 +32,7 @@ function App() {
           alignItems: 'center',
           flexDirection: 'column',
           textAlign: 'center',
-          backgroundImage: "url('/logos/dallas1.jpeg')", // Path for landing page background
+          backgroundImage: "url('/logos/dallas1.jpeg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -50,6 +49,7 @@ function App() {
         >
           Aaron Xu
         </Typography>
+        
         <Typography
           variant="h4"
           sx={{
@@ -61,6 +61,7 @@ function App() {
         >
           Grad Student - Software Engineer - AI/ML Developer
         </Typography>
+      
       </Box>
 
       {/* About Me Section */}
@@ -101,11 +102,11 @@ function App() {
           id="contact"
           sx={{
             position: 'relative',
-            backgroundImage: "url('/logos/contact-background.jpg')", // Path for contact page background
+            backgroundImage: "url('/logos/contact-background.jpg')",
             backgroundSize: 'auto 50%',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            height: '100vh', // Ensure full viewport height
+            height: '100vh',
             width: '100%',
             margin: 0,
             padding: 0,
@@ -117,6 +118,7 @@ function App() {
         >
           <ContactMe />
         </Box>
+      
       </Box>
     </div>
   );

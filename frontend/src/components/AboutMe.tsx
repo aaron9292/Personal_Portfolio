@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Typography, Avatar, Container, Grid, IconButton } from "@mui/material";
 import { Facebook, LinkedIn, GitHub } from "@mui/icons-material";
 import profileImage from '../assets/headshot.jpg';
@@ -9,12 +8,11 @@ function AboutMe() {
       id="about-me"
       sx={{
         padding: "4rem 0",
-        backgroundColor: "#f9f9f9", // Light beige background
+        backgroundColor: "#f9f9f9",
       }}
     >
       <Container maxWidth="lg">
         <Grid container spacing={4} alignItems="center">
-          {/* Profile Image */}
           <Grid
             item
             xs={12}
@@ -22,8 +20,8 @@ function AboutMe() {
             sx={{
               display: "flex",
               flexDirection: "column",
-              alignItems: "center", // Centers content horizontally
-              justifyContent: "center", // Centers content vertically
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
             <Avatar

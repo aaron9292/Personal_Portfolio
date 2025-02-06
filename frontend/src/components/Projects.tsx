@@ -1,10 +1,8 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Import for navigation
-import { Box, Typography, Card, CardContent, Grid, Button, Chip } from '@mui/material';
-import { GitHub } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
+import { Box, Typography, Card, CardContent, Grid, Chip } from '@mui/material';
 
 function Projects() {
-  const navigate = useNavigate(); // React Router hook for navigation
+  const navigate = useNavigate();
 
   const projects = [
     {
@@ -36,7 +34,6 @@ function Projects() {
         Projects
       </Typography>
 
-      {/* Grid Layout for Project Cards */}
       <Grid container spacing={4} justifyContent="center">
         {projects.map((project, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
@@ -48,13 +45,13 @@ function Projects() {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                cursor: 'pointer', // Makes the card clickable
+                cursor: 'pointer',
                 '&:hover': {
-                  transform: 'scale(1.02)', // Adds a hover effect
+                  transform: 'scale(1.02)',
                   transition: 'transform 0.2s',
                 },
               }}
-              onClick={() => navigate(`/project/${project.id}`)} // Navigate to details page
+              onClick={() => navigate(`/project/${project.id}`)}
             >
               <CardContent>
                 <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 1 }}>
